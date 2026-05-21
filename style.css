@@ -83,6 +83,7 @@ body::before {
   border-radius: 28px;
   box-shadow: var(--shadow);
   padding: 2rem;
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
 }
 
@@ -112,14 +113,9 @@ body::before {
 }
 
 .brand-copy p,
-.panel-instruction,
 .summary-heading p {
   color: var(--muted);
   line-height: 1.7;
-}
-
-.panel-instruction {
-  max-width: 48ch;
 }
 
 .form-grid {
@@ -339,7 +335,6 @@ input:focus-visible {
     padding: 1rem;
   }
 
-  .hero-panel,
   .calculator-panel,
   .summary-panel {
     border-radius: 22px;
