@@ -64,7 +64,7 @@ tipflow-tip-calculator/
 
 ### 📱 Mobile View
 
-![Mobile Screenshot](assets/screenshot-mobile.png)
+![Mobile Screenshot](assets/screenshot-mobile.jpeg)
 
 ---
 
