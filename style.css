@@ -1,0 +1,414 @@
+/* ========================= */
+/* RESET & GLOBAL STYLES */
+/* ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #14b8a6;
+  --primary-hover: #0f9c8d;
+
+  --background-color: #0f172a;
+  --card-color: #111827;
+
+  --input-color: #1f2937;
+  --border-color: #374151;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+
+  --error-color: #ef4444;
+
+  --shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #111827, #1e293b);
+
+  color: var(--text-primary);
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem;
+}
+
+/* ========================= */
+/* MAIN CONTAINER */
+/* ========================= */
+
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ========================= */
+/* MAIN CARD */
+/* ========================= */
+
+.tipflow-card {
+  background-color: var(--card-color);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  border-radius: 24px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 40px var(--shadow-color);
+}
+
+/* ========================= */
+/* LEFT SECTION */
+/* ========================= */
+
+.input-section {
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ========================= */
+/* BRANDING */
+/* ========================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-logo {
+  width: 70px;
+  height: 70px;
+
+  object-fit: contain;
+}
+
+.brand-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+
+  margin-bottom: 0.3rem;
+}
+
+.brand-text p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* ========================= */
+/* FORM GROUPS */
+/* ========================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+label {
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  color: var(--text-primary);
+}
+
+/* ========================= */
+/* INPUTS */
+/* ========================= */
+
+.input-field {
+  width: 100%;
+
+  background-color: var(--input-color);
+
+  border: 2px solid transparent;
+
+  border-radius: 14px;
+
+  padding: 1rem 1rem;
+
+  color: var(--text-primary);
+
+  font-size: 1rem;
+
+  outline: none;
+
+  transition: 0.25s ease;
+}
+
+.input-field::placeholder {
+  color: var(--text-secondary);
+}
+
+.input-field:focus {
+  border-color: var(--primary-color);
+
+  box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.15);
+}
+
+/* Remove Number Input Arrows */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+/* ========================= */
+/* TIP BUTTONS */
+/* ========================= */
+
+.tip-buttons {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 0.8rem;
+}
+
+.tip-btn {
+  background-color: var(--input-color);
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 1rem;
+
+  color: var(--text-primary);
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.tip-btn:hover {
+  background-color: #273549;
+}
+
+.active-tip {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.active-tip:hover {
+  background-color: var(--primary-hover);
+}
+
+.custom-tip-input {
+  margin-top: 0.5rem;
+}
+
+/* ========================= */
+/* ERROR MESSAGES */
+/* ========================= */
+
+.error-message {
+  min-height: 18px;
+
+  color: var(--error-color);
+
+  font-size: 0.85rem;
+
+  padding-left: 0.2rem;
+}
+
+/* ========================= */
+/* RESET BUTTON */
+/* ========================= */
+
+.reset-btn {
+  margin-top: 0.5rem;
+
+  background-color: var(--primary-color);
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 14px;
+
+  padding: 1rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.reset-btn:hover {
+  background-color: var(--primary-hover);
+
+  transform: translateY(-2px);
+}
+
+.reset-btn:active {
+  transform: translateY(0);
+}
+
+/* ========================= */
+/* RIGHT SECTION */
+/* ========================= */
+
+.results-section {
+  background: linear-gradient(180deg, #0f172a, #111827);
+
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.results-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+/* ========================= */
+/* RESULT CARD */
+/* ========================= */
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.result-item {
+  background-color: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  border-radius: 18px;
+
+  padding: 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.result-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.result-label span {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.result-label small {
+  color: var(--text-secondary);
+}
+
+.result-item h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+
+  text-align: right;
+}
+
+/* ========================= */
+/* FOCUS STATES */
+/* ========================= */
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+@media (max-width: 900px) {
+  .tipflow-card {
+    grid-template-columns: 1fr;
+  }
+
+  .results-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .input-section,
+  .results-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .brand {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .brand-text h1 {
+    font-size: 1.7rem;
+  }
+
+  .tip-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .result-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .result-item h3 {
+    text-align: left;
+  }
+}
+
+@media (max-width: 400px) {
+  .tip-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .results-section h2 {
+    font-size: 1.5rem;
+  }
+}
